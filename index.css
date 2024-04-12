@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#containerOfBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#4e4e4e, #808080);
+  height: 100vh;
+}
+
+#container {
+  width: 70vw;
+  height: 70vh;
+  border: 5px solid rgb(25, 43, 25);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
+  margin: 50px 0px 50px 0px;
+}
+
+#resetButton {
+  background: linear-gradient(#437546, #ffffff);
+  border: 2px solid rgb(46, 46, 46);
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#resetButton:hover {
+  background-color: #a9a9a9;
+  color: white;
+}
+
+.single-element {
+  background-color: rgb(67, 117, 70);
+  border: 2px solid rgb(25, 43, 25);
+  color: rgb(67, 117, 70);
+  cursor: pointer;
+}
+
+.single-element.opened {
+  background-color: rgb(192, 144, 40);
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.matchingCards {
+  visibility: hidden;
+}
+
+.rotation {
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+#message {
+  background: linear-gradient(#c09028, #ffffff);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+
+#containerOfMessageAndResetButton {
+  display: flex;
+  flex-direction: column;
+}
